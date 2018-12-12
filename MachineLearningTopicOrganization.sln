@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineLearningTopicOrganization.Web", "MachineLearningTopicOrganization.Web\MachineLearningTopicOrganization.Web.csproj", "{C51F7C22-6553-4D69-8118-FF9C57A3CDC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLTO.Data", "MLTO.Data\MLTO.Data.csproj", "{CE2312FA-1FEA-48E2-B870-7D15D3187CBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C51F7C22-6553-4D69-8118-FF9C57A3CDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C51F7C22-6553-4D69-8118-FF9C57A3CDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C51F7C22-6553-4D69-8118-FF9C57A3CDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE2312FA-1FEA-48E2-B870-7D15D3187CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2312FA-1FEA-48E2-B870-7D15D3187CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2312FA-1FEA-48E2-B870-7D15D3187CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2312FA-1FEA-48E2-B870-7D15D3187CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

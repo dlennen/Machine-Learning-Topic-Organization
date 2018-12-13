@@ -12,7 +12,7 @@ namespace MLTO.Data
         public Guid OwnerId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        //ddd​
+  ​
      public DateTimeOffset CreatedUtc { get; set; }
 ​
      public DateTimeOffset? ModifiedUtc { get; set; }

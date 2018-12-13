@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MachineLearningTopicOrganization.Web.Models;
+using MLTO.Data;
 
 namespace MachineLearningTopicOrganization.Web.Controllers
 {

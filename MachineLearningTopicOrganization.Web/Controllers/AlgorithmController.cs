@@ -1,4 +1,6 @@
-﻿using MLTO.Models;
+﻿using Microsoft.AspNet.Identity;
+using MLTO.Models;
+using MLTO.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace MachineLearningTopicOrganization.Web.Controllers
         // GET: Algorithm
         public ActionResult Index()
         {
-            var model = new AlgorithmListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new AlgorithmService(userId);
+            var model = service.GetAlgorithms();
+
             return View(model);
         }
 
@@ -27,11 +32,18 @@ namespace MachineLearningTopicOrganization.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(AlgorithmCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new AlgorithmService(userId);
+            
+             service.CreateAlgorithm(model);
+            
+             return RedirectToAction("Index");
+
         }
     }
 }

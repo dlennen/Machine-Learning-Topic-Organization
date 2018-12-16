@@ -16,5 +16,22 @@ namespace MachineLearningTopicOrganization.Web.Controllers
             var model = new AlgorithmListItem[0];
             return View(model);
         }
+
+        // GET Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(AlgorithmCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+                
+            }
+            return View(model);
+        }
     }
 }

@@ -18,8 +18,7 @@ namespace MLTO.Data
         [Required]
         public string LearningAlgorithm { get; set; }
 
-        [Display(Prompt = "Self-estimated level of mastery  (0-10 scale)")]
-        [Range(0,10, ErrorMessage = "Please enter an integer between 0 and 10")]
+        [Required]
         public int MasteryLevel { get; set; }
 
         [Required]

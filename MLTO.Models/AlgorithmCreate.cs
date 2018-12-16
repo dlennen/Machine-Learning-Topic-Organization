@@ -7,22 +7,15 @@ using System.Threading.Tasks;
 
 namespace MLTO.Models
 {
-    public class AlgorithmListItem
+    public class AlgorithmCreate
     {
-        [Display(Name = "ID")]
-        public int AlgorithmId { get; set; }
-
+        [Required]
         [Display(Name = "Algorithm")]
         public string LearningAlgorithm { get; set; }
 
-        [Display(Name = "Mastery Level")]
+        [Display(Name = "Mastery Level", Prompt = "Self-estimated level of mastery  (0-10 scale)")]
+        [Range(0, 10, ErrorMessage = "Please enter an integer between 0 and 10")]
         public int MasteryLevel { get; set; }
-
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        [Display(Name = "Last Modification")]
-        public DateTimeOffset? ModifiedUtc { get; set; }
 
         public override string ToString() => LearningAlgorithm;
     }

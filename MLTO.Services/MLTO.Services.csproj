@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgorithmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MLTO.Data\MLTO.Data.csproj">
+      <Project>{ce2312fa-1fea-48e2-b870-7d15d3187cbf}</Project>
+      <Name>MLTO.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MLTO.Models\MLTO.Models.csproj">
+      <Project>{08197b33-94e6-4015-befb-317f8133092a}</Project>
+      <Name>MLTO.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

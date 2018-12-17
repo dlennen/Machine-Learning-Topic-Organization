@@ -77,5 +77,22 @@ namespace MLTO.Services
                     };
             }
         }
+
+        public bool UpdateAlgorithm(AlgorithmEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Algorithms
+                        .Single(e => e.AlgorithmId == model.AlgorithmId && e.OwnerId == _userId);
+                
+                entity.LearningAlgorithm = model.LearningAlgorithm;
+                entity.MasteryLevel = model.MasteryLevel;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                
+         return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

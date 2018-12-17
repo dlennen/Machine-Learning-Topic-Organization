@@ -55,6 +55,44 @@ namespace MachineLearningTopicOrganization.Web.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateAlgorithmService();
+            var detail = service.GetAlgorithmById(id);
+            var model =
+                new AlgorithmEdit
+                {
+                    AlgorithmId = detail.AlgorithmId,
+                    LearningAlgorithm = detail.LearningAlgorithm,
+                    MasteryLevel = detail.MasteryLevel
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, AlgorithmEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            
+            if (model.AlgorithmId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateAlgorithmService();
+            
+            if (service.UpdateAlgorithm(model))
+            {
+                TempData["SaveResult"] = "Your algorithm was updated.";
+                return RedirectToAction("Index");
+            }
+            
+            ModelState.AddModelError("", "Your note could not be updated.");
+            return View(model);
+        }
+
         private AlgorithmService CreateAlgorithmService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

@@ -244,6 +244,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Algorithm\Index.cshtml" />
     <Content Include="Views\Algorithm\Create.cshtml" />
+    <Content Include="Views\Algorithm\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,58 @@
+﻿@model MLTO.Models.AlgorithmDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AlgorithmDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AlgorithmId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlgorithmId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LearningAlgorithm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LearningAlgorithm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MasteryLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MasteryLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlgorithmId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

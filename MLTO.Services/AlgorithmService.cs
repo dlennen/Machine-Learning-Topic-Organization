@@ -57,5 +57,25 @@ namespace MLTO.Services
                  return query.ToArray();
             }
         }
+
+        public AlgorithmDetail GetAlgorithmById(int AlgorithmId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Algorithms
+                        .Single(e => e.AlgorithmId == AlgorithmId && e.OwnerId == _userId);
+                return
+                    new AlgorithmDetail
+                    {
+                        AlgorithmId = entity.AlgorithmId,
+                        LearningAlgorithm = entity.LearningAlgorithm,
+                        MasteryLevel = entity.MasteryLevel,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
     }
 }

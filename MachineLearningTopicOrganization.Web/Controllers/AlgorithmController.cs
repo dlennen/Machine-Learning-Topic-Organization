@@ -47,6 +47,14 @@ namespace MachineLearningTopicOrganization.Web.Controllers
 
         }
 
+        public ActionResult Details(int id)
+        {
+            var svc = CreateAlgorithmService();
+            var model = svc.GetAlgorithmById(id);
+
+            return View(model);
+        }
+
         private AlgorithmService CreateAlgorithmService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlgorithmCreate.cs" />
+    <Compile Include="AlgorithmDetail.cs" />
     <Compile Include="AlgorithmListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

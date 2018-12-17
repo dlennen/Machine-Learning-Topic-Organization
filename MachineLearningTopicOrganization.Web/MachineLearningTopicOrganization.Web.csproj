@@ -246,6 +246,8 @@
     <Content Include="Views\Algorithm\Create.cshtml" />
     <Content Include="Views\Algorithm\Details.cshtml" />
     <Content Include="Views\Algorithm\Edit.cshtml" />
+    <Content Include="Views\Algorithm\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

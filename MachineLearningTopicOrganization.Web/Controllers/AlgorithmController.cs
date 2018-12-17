@@ -37,11 +37,11 @@ namespace MachineLearningTopicOrganization.Web.Controllers
 
             if (service.CreateAlgorithm(model))
             {
-                TempData["SaveResult"] = "Your note was created.";
+                TempData["SaveResult"] = "Your algorithm was created.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Note could not be created.");
+            ModelState.AddModelError("", "Algorithm could not be created.");
 
             return View(model);
 
@@ -89,8 +89,31 @@ namespace MachineLearningTopicOrganization.Web.Controllers
                 return RedirectToAction("Index");
             }
             
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your algorithm could not be updated.");
             return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateAlgorithmService();
+            var model = svc.GetAlgorithmById(id);
+            
+         return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateAlgorithmService();
+
+            service.DeleteAlgorithm(id);
+
+            TempData["SaveResult"] = "Your algorithm was deleted";
+
+            return RedirectToAction("Index");
         }
 
         private AlgorithmService CreateAlgorithmService()

@@ -94,5 +94,20 @@ namespace MLTO.Services
          return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteAlgorithm(int AlgorithmId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Algorithms
+                        .Single(e => e.AlgorithmId == AlgorithmId && e.OwnerId == _userId);
+
+                ctx.Algorithms.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

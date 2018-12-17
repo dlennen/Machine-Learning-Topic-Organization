@@ -15,8 +15,7 @@ namespace MachineLearningTopicOrganization.Web.Controllers
         // GET: Algorithm
         public ActionResult Index()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new AlgorithmService(userId);
+            var service = CreateAlgorithmService();
             var model = service.GetAlgorithms();
 
             return View(model);
@@ -32,18 +31,27 @@ namespace MachineLearningTopicOrganization.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(AlgorithmCreate model)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) return View(model);
+
+            var service = CreateAlgorithmService();
+
+            if (service.CreateAlgorithm(model))
             {
-                return View(model);
+                TempData["SaveResult"] = "Your note was created.";
+                return RedirectToAction("Index");
             }
 
+            ModelState.AddModelError("", "Note could not be created.");
+
+            return View(model);
+
+        }
+
+        private AlgorithmService CreateAlgorithmService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new AlgorithmService(userId);
-            
-             service.CreateAlgorithm(model);
-            
-             return RedirectToAction("Index");
-
+            return service;
         }
     }
 }

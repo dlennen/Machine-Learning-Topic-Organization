@@ -116,6 +116,8 @@ namespace MachineLearningTopicOrganization.Web.Controllers
             return RedirectToAction("Index");
         }
 
+
+        //Helper Method
         private AlgorithmService CreateAlgorithmService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

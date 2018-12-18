@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MLTO.Data.LearningStyleLookUp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Learning Style Table</h2>
+
+<@*p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LearningStyle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LearningAlgorithm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LearningStyle)
+        </td>
+    </tr>
+}
+
+</table>

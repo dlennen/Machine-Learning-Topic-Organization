@@ -13,7 +13,7 @@ namespace MLTO.Models
         [Display(Name = "Algorithm")]
         public string LearningAlgorithm { get; set; }
 
-        [Display(Name = "Mastery Level", Prompt = "Self-estimated level of mastery  (0-10 scale)")]
+        [Display(Name = "Mastery Level (0 - 10 scale)")]
         [Range(0, 10, ErrorMessage = "Please enter an integer between 0 and 10")]
         public int MasteryLevel { get; set; }
 

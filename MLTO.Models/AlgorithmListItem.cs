@@ -18,6 +18,12 @@ namespace MLTO.Models
         [Display(Name = "Mastery Level")]
         public int MasteryLevel { get; set; }
 
+        [Display(Name = "Learning Style")]
+        public string LearningStyle { get; set; }
+
+        [Display(Name = "Learning Type")]
+        public string LearningType { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 

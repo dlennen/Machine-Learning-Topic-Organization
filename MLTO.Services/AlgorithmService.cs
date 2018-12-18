@@ -51,7 +51,10 @@ namespace MLTO.Services
                                     AlgorithmId = e.AlgorithmId,
                                     LearningAlgorithm = e.LearningAlgorithm,
                                     MasteryLevel = e.MasteryLevel,
-                                    CreatedUtc = e.CreatedUtc
+                                    CreatedUtc = e.CreatedUtc,
+                                    ModifiedUtc = e.ModifiedUtc,
+                                    LearningStyle = e.LearningStyle,
+                                    LearningType = e.LearningType
                                 }
                         );
                 

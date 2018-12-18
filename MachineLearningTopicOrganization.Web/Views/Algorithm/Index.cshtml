@@ -33,6 +33,12 @@
             @Html.DisplayNameFor(model => model.MasteryLevel)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.LearningStyle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LearningType)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
         <th>
@@ -43,28 +49,34 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlgorithmId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LearningAlgorithm)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MasteryLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedUtc)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.AlgorithmId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.AlgorithmId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.AlgorithmId })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlgorithmId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LearningAlgorithm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MasteryLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LearningStyle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LearningType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.AlgorithmId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AlgorithmId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AlgorithmId })
+        </td>
+    </tr>
     }
 
 </table>

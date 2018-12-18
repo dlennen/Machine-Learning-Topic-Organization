@@ -1,0 +1,12 @@
+LearningStyle	LearningType
+Deep Learning	Multiple
+Ensemble	Multiple
+Neural Networks	Multiple
+Regularization	Overfitting Reduction
+Rule System	Multiple
+Regression	Supervised
+Bayesian	Supervised
+Decision Tree	Supervised
+Dimensionality Reduction	Feature Selection
+Instance Based	Multiple
+Clustering	Unsupervised

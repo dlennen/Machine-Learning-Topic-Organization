@@ -56,11 +56,50 @@
   <ItemGroup>
     <Compile Include="Algorithm.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="LearningStyleLookUp.cs" />
+    <Compile Include="Migrations\201812132335522_InitialCreate.cs" />
+    <Compile Include="Migrations\201812132335522_InitialCreate.Designer.cs">
+      <DependentUpon>201812132335522_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181045560_firstMigration.cs" />
+    <Compile Include="Migrations\201812181045560_firstMigration.Designer.cs">
+      <DependentUpon>201812181045560_firstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181053502_RequiredKeyRemoval.cs" />
+    <Compile Include="Migrations\201812181053502_RequiredKeyRemoval.Designer.cs">
+      <DependentUpon>201812181053502_RequiredKeyRemoval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181109521_thirdMigration.cs" />
+    <Compile Include="Migrations\201812181109521_thirdMigration.Designer.cs">
+      <DependentUpon>201812181109521_thirdMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812181112132_fourth.cs" />
+    <Compile Include="Migrations\201812181112132_fourth.Designer.cs">
+      <DependentUpon>201812181112132_fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812132335522_InitialCreate.resx">
+      <DependentUpon>201812132335522_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181045560_firstMigration.resx">
+      <DependentUpon>201812181045560_firstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181053502_RequiredKeyRemoval.resx">
+      <DependentUpon>201812181053502_RequiredKeyRemoval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181109521_thirdMigration.resx">
+      <DependentUpon>201812181109521_thirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812181112132_fourth.resx">
+      <DependentUpon>201812181112132_fourth.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

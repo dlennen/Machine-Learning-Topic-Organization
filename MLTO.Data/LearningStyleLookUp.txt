@@ -1,0 +1,64 @@
+LearningAlgorithm	LearningStyle
+Deep Boltzman Machine	Deep Learning
+Deep Belief Networks	Deep Learning
+Convolutional Neural Network	Deep Learning
+Stacked Auto-Encoders	Deep Learning
+Random Forest	Ensemble
+Gradient Boosting Machines	Ensemble
+Boosting	Ensemble
+Bootstrapped Aggregation	Ensemble
+AdaBoost	Ensemble
+Stacked Generalization	Ensemble
+Gradient Boosted Regression Trees	Ensemble
+Radial Basis Function Network	Neural Networks
+Perceptron	Neural Networks
+Back-Propagation	Neural Networks
+Hopfield Network	Neural Networks
+Ridge Regression	Regularization
+Least Absolute Shrinkage and Selection Operator	Regularization
+Elastic Net	Regularization
+Least Angle Regression	Regularization
+Cubist	Rule System
+One Rule	Rule System
+Zero Rule	Rule System
+Repeated Incremental Pruning to Produce Error Reduction	Rule System
+Linear Regression	Regression
+Ordinary Least Squares Regression	Regression
+Stepwise Regression	Regression
+Multivariate Adaptive Regression Splines	Regression
+Locally Estimated Scatterplot Smoothing	Regression
+Logistic Regression	Regression
+Naive Bayes	Bayesian
+Averaged One-Dependence Estimators	Bayesian
+Bayesian Belief Network	Bayesian
+Gaussian Naive Bayes	Bayesian
+Multinomial Naive Bayes	Bayesian
+Bayesian Network	Bayesian
+Classification and Regression Tree	Decision Tree
+Iterative Dichotomiser3	Decision Tree
+C4.5	Decision Tree
+C5.0	Decision Tree
+Chi-squared Automatic Interaction Detection	Decision Tree
+Decision Stump	Decision Tree
+Conditional Decision Trees	Decision Tree
+M5	Decision Tree
+Principal Component Analysis	Dimensionality Reduction
+Partial Least Squares Regression	Dimensionality Reduction
+Sammon Mapping	Dimensionality Reduction
+Multidimensional Scaling	Dimensionality Reduction
+Projection Pursuit	Dimensionality Reduction
+Principal Component Regression	Dimensionality Reduction
+Partial Least Squares Discriminant Analysis	Dimensionality Reduction
+Mixture Discriminant Analysis	Dimensionality Reduction
+Quadratic Discriminant Analysis	Dimensionality Reduction
+Regularized Discriminant Analysis	Dimensionality Reduction
+Flexible Discriminant Analysis	Dimensionality Reduction
+Linear Discriminant Analysis	Dimensionality Reduction
+k-Nearest Neighbor	Instance Based
+Learning Vector Quantization	Instance Based
+Self-Organizing Map	Instance Based
+Locally Weighted Learning	Instance Based
+k-Means	Clustering
+k-Medians	Clustering
+Expectation Maximization	Clustering
+Hierarchical Clustering	Clustering

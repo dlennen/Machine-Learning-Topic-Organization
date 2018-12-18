@@ -18,9 +18,13 @@ namespace MLTO.Data
         [Required]
         public string LearningAlgorithm { get; set; }
 
+        public string LearningStyle { get; set; }
+
+        public string LearningType { get; set; }
+
         [Required]
         public int MasteryLevel { get; set; }
-
+        
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         

@@ -1,4 +1,5 @@
-﻿using MLTO.Data;
+﻿using MLTO.Contracts;
+using MLTO.Data;
 using MLTO.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MLTO.Services
 {
-    public class AlgorithmService
+    public class AlgorithmService : IAlgorithm
     {
         private readonly Guid _userId;
         

@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MLTO.Contracts\MLTO.Contracts.csproj">
+      <Project>{8A112CF6-F4E6-476B-AA51-B05FDD448EC7}</Project>
+      <Name>MLTO.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MLTO.Data\MLTO.Data.csproj">
       <Project>{ce2312fa-1fea-48e2-b870-7d15d3187cbf}</Project>
       <Name>MLTO.Data</Name>
